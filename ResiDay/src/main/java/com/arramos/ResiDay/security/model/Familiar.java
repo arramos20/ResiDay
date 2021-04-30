@@ -19,10 +19,6 @@ import java.util.Collection;
 @Entity
 public class Familiar extends Usuario{
 
-
-    /**
-     *
-     */
     private static final long serialVersionUID = 1L;
 
     @Id
