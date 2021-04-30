@@ -26,6 +26,7 @@ public class Residente {
     private LocalDate fechaSalida;
     private String causaSalida;
 
+    //Con fechaSalida
     public Residente(String nombre, String apellidos, LocalDate fechaNacimiento, LocalDate fechaEntradaResidencia, LocalDate fechaSalida, String causaSalida) {
         this.nombre = nombre;
         this.apellidos = apellidos;
@@ -33,5 +34,13 @@ public class Residente {
         this.fechaEntradaResidencia = LocalDate.now(); //Para que tenga hoy como fecha de entrada si generamos un nuevo residente
         this.fechaSalida = fechaSalida;
         this.causaSalida = causaSalida;
+    }
+
+    //Sin fechaSalida ni causaSalida (porque sigue en la residencia)
+    public Residente(String nombre, String apellidos, LocalDate fechaNacimiento, LocalDate fechaEntradaResidencia) {
+        this.nombre = nombre;
+        this.apellidos = apellidos;
+        this.fechaNacimiento = fechaNacimiento;
+        this.fechaEntradaResidencia = LocalDate.now(); //Para que tenga hoy como fecha de entrada si generamos un nuevo residente
     }
 }

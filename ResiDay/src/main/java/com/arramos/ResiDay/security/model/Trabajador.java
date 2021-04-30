@@ -24,7 +24,7 @@ public class Trabajador extends Usuario{
 
     public Trabajador(String nombre, String apellidos, String email, String password, LocalDate fechaAlta, String nombrePuesto) {
         super(nombre, apellidos, email, password);
-        this.fechaAlta = fechaAlta;
+        this.fechaAlta = LocalDate.now();
         this.nombrePuesto = nombrePuesto;
     }
 
