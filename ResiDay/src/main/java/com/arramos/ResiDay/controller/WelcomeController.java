@@ -8,6 +8,6 @@ public class WelcomeController {
 
     @GetMapping("/")
     public String index() {
-        return "index";
+        return "index-no-logeado";
     }
 }
