@@ -12,7 +12,7 @@ import javax.persistence.*;
 @Inheritance(strategy = InheritanceType.JOINED)
 public abstract class Usuario implements UserDetails {
 
-    private static final long serialVersionUID = 1409538586158223652L;
+    private static final long serialVersionUID = 283729872398124L;
 
     @Id
     @GeneratedValue
@@ -21,7 +21,7 @@ public abstract class Usuario implements UserDetails {
     private String nombre;
     private String apellidos;
 
-    // Este será nuestro "username"
+    // Este será nuestro "username", que podremos llamar de otra manera si queremos
     @Column(unique = true)
     private String email;
 
