@@ -3,7 +3,9 @@ package com.arramos.ResiDay;
 import com.arramos.ResiDay.security.model.Familiar;
 import com.arramos.ResiDay.security.model.Residente;
 import com.arramos.ResiDay.security.model.Trabajador;
+import com.arramos.ResiDay.security.model.Visita;
 import com.arramos.ResiDay.service.UsuarioServicio;
+import com.arramos.ResiDay.service.VisitaServicio;
 import org.springframework.boot.CommandLineRunner;
 import org.springframework.boot.SpringApplication;
 import org.springframework.boot.autoconfigure.SpringBootApplication;
@@ -11,6 +13,8 @@ import org.springframework.context.annotation.Bean;
 import org.springframework.security.crypto.password.PasswordEncoder;
 
 import java.time.LocalDate;
+import java.time.LocalDateTime;
+import java.time.Month;
 
 @SpringBootApplication
 public class ResiDayApplication {
@@ -39,9 +43,13 @@ public class ResiDayApplication {
 			Residente r2=new Residente("Elena", "Toledo Nycte", LocalDate.of(1983, 6, 14), LocalDate.of(2019, 9, 16));
 			Residente r3=new Residente("Darla", "Rios Olavide", LocalDate.of(1988, 12, 6), LocalDate.of(2012, 5, 29), LocalDate.of(2017, 9, 5) , "Traslado");
 
-			//Aquí tengo que meterle el servicio de residente
 
-			//Falta visitas
+
+			//Aquí tengo que meterle el servicio de residente
+			Visita v1=new Visita( LocalDateTime.of(2021, Month.APRIL, 19, 18, 42), LocalDateTime.of(2021, Month.APRIL, 25, 11, 30), LocalDateTime.of(2021, Month.APRIL, 25, 12, 30) ,"Cumpleaños del residente", true);
+			Visita v2=new Visita( LocalDateTime.of(2021, Month.MARCH, 27, 13, 16), LocalDateTime.of(2021, Month.APRIL, 3, 19, 20), LocalDateTime.of(2021, Month.APRIL, 3, 20, 00), "Denegada por vacuna del residente", false);
+
+			//VisitaServicio.save(v1);
 
 
 
